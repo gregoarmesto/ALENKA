@@ -12,6 +12,8 @@
   gap: 15px;
   padding: 20px;
 
+  grid-auto-rows: 1fr;  // <-- añade esto
+
   a {
     position: relative;
     display: block;
@@ -58,24 +60,23 @@
     }
   }
 
-  /* --------- Responsive --------- */
- @media (max-width: 768px) {
-  grid-template-columns: 1fr 1fr;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
 
-  a {
-    grid-column: auto !important;
-    grid-row: auto !important;
-    height: 200px;
+    a {
+      grid-column: auto !important;
+      grid-row: auto !important;
+      height: 200px;
+    }
   }
-}
 
-@media (max-width: 480px) {
-  grid-template-columns: 1fr;
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
 
-  a {
-    grid-column: auto !important;
-    grid-row: auto !important;
-    height: 250px;
+    a {
+      grid-column: auto !important;
+      grid-row: auto !important;
+      height: 250px;
+    }
   }
-}
 }
