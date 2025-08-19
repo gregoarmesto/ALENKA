@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALENKA</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ <style>
+    /* Opcional: que todas las cards queden parejas */
+    .product-card { height: 100%; display: flex; flex-direction: column; }
+    .product-body { flex: 1; display: flex; flex-direction: column; }
+    .price-badge { font-size: 1rem; }
+    .carousel-item img { object-fit: cover; height: 260px; width: 100%; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary roboto-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="../assets/logo1.png" alt="Bootstrap" width="120" height="60"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/marroquineria.html">Marroquineria</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Accesorios
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Bijou</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Cintos</a></li>
+                <li><a class="dropdown-item" href="#">Gorras</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="" aria-label="search"/>
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container py-4">
+      <h1 class="mb-4 h1-lentes">Lentes de sol</h1>
+
+      <!-- GRID de productos -->
+      <div class="row g-4">
+
+        <!-- === Producto 1 === -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm product-card" data-sku="LEN-001">
+            <div id="lens1Carousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../assets/LENTES1.png" class="d-block" alt="Lente Modelo 1 - vista 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="../assets/LENTES1-2.png" class="d-block" alt="Lente Modelo 1 - vista 2">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#lens1Carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#lens1Carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+
+            <div class="card-body product-body">
+              <h5 class="card-title mt-2" data-name>Lente Modelo 1</h5>
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="badge text-bg-success price-badge" data-price>$ —</span>
+                <span class="badge text-bg-secondary" data-stock>Stock: —</span>
+              </div>
+              <p class="card-text small text-muted mb-3">
+                Armazón liviano, bisagras metálicas.
+              </p>
+              <div class="d-grid gap-2 mt-auto">
+                <a class="btn btn-outline-success" data-wa href="#">Contactar por WhatsApp</a>
+                <a class="btn btn-primary" data-buy href="#">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- === Producto 2 === -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm product-card" data-sku="LEN-002">
+            <div id="lens2Carousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../assets/LENTES2.png" class="d-block" alt="Lente Modelo 2 - vista 1">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#lens2Carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#lens2Carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+
+            <div class="card-body product-body">
+              <h5 class="card-title mt-2" data-name>Lente Modelo 2</h5>
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="badge text-bg-success price-badge" data-price>$ —</span>
+                <span class="badge text-bg-secondary" data-stock>Stock: —</span>
+              </div>
+              <p class="card-text small text-muted mb-3">
+                Cristales polarizados, marco verde agua, estuche incluido.
+              </p>
+              <div class="d-grid gap-2 mt-auto">
+                <a class="btn btn-outline-success" data-wa href="#">Contactar por WhatsApp</a>
+                <a class="btn btn-primary" data-buy href="#">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- === Producto 3 === -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm product-card" data-sku="LEN-003">
+            <div id="lens3Carousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../assets/LENTES10.png" class="d-block" alt="Lente Modelo 3 - vista 1">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#lens3Carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#lens3Carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+
+            <div class="card-body product-body">
+              <h5 class="card-title mt-2" data-name>Lente Modelo 3</h5>
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="badge text-bg-success price-badge" data-price>$ —</span>
+                <span class="badge text-bg-secondary" data-stock>Stock: —</span>
+              </div>
+              <p class="card-text small text-muted mb-3">
+                Lentes de sol polarizados negros.
+              </p>
+              <div class="d-grid gap-2 mt-auto">
+                <a class="btn btn-outline-success" data-wa href="#">Contactar por WhatsApp</a>
+                <a class="btn btn-primary" data-buy href="#">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicá un bloque .col-... para más productos -->
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS (incluye Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Sincronización de precio/stock desde Google Sheets (Apps Script) -->
+    <script>
+      (() => {
+        // 👉 Poné acá tu endpoint de Apps Script y tu número de WhatsApp
+        const ENDPOINT = 'https://script.google.com/macros/s/AKfycbx9H-87cfBXgclVG0lnVi4vGN12m_2ZqEm4v30ACEtHpJydwpQ1iPgT4XKzfcj14R9plw/exec'; // <-- reemplazar
+        const WHATSAPP_NUMBER = '5492983444334'; // <-- reemplazar
+
+        const currencyARS = new Intl.NumberFormat('es-AR', {
+          style: 'currency',
+          currency: 'ARS',
+          maximumFractionDigits: 0
+        });
+
+        async function fetchInventory() {
+          const res = await fetch(ENDPOINT, { cache: 'no-store' });
+          if (!res.ok) throw new Error('No se pudo leer inventario');
+          const data = await res.json();
+          return data.items || [];
+        }
+
+        function applyToDOM(items) {
+          const bySku = new Map(items.map(i => [String(i.sku).trim(), i]));
+          document.querySelectorAll('[data-sku]').forEach(card => {
+            const sku = card.dataset.sku;
+            const item = bySku.get(sku);
+            if (!item) return;
+
+            // Nombre
+            const nameEl = card.querySelector('[data-name]');
+            if (nameEl && item.name) nameEl.textContent = String(item.name);
+
+            // Precio
+            const priceEl = card.querySelector('[data-price]');
+            if (priceEl) {
+              const val = Number(item.price_ars || 0);
+              priceEl.textContent = val ? currencyARS.format(val) : '—';
+            }
+
+            // Stock
+            const stockEl = card.querySelector('[data-stock]');
+            const stockNum = Number(item.stock || 0);
+            const inStock = stockNum > 0;
+            if (stockEl) stockEl.textContent = inStock ? `Stock: ${stockNum}` : 'Sin stock';
+
+            // Comprar (MercadoPago)
+            const buyBtn = card.querySelector('[data-buy]');
+            if (buyBtn) {
+              const url = String(item.mp_url || '#').trim();
+              buyBtn.href = url || '#';
+              buyBtn.toggleAttribute('disabled', !inStock);
+              buyBtn.setAttribute('aria-disabled', !inStock);
+              buyBtn.textContent = inStock ? 'Comprar' : 'Agotado';
+            }
+
+            // WhatsApp
+            const waBtn = card.querySelector('[data-wa]');
+            if (waBtn) {
+              const baseMsg = item.wa_text ? String(item.wa_text) : `Hola Alenka, me interesa ${item.name || sku} (SKU ${sku})`;
+              const msg = encodeURIComponent(baseMsg);
+              waBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+            }
+
+            // Estilo visual si no hay stock
+            card.classList.toggle('out-of-stock', !inStock);
+          });
+        }
+
+        async function refresh() {
+          try {
+            const items = await fetchInventory();
+            applyToDOM(items);
+          } catch (err) {
+            console.error(err);
+          }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+          refresh();
+          // refresco cada 60 s y al volver a la pestaña
+          setInterval(refresh, 60000);
+          document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) refresh();
+          });
+        });
+      })();
+    </script>
+
+    <!-- Estilos opcionales para estado sin stock -->
+    <style>
+      .out-of-stock .price-badge { opacity: .6 }
+      .out-of-stock [data-buy] {
+        pointer-events: none;
+        opacity: .6;
+      }
+      .carousel-item img { object-fit: cover; height: 260px; width: 100%; }
+      .product-card { height: 100%; display: flex; flex-direction: column; }
+      .product-body { flex: 1; display: flex; flex-direction: column; }
+      .price-badge { font-size: 1rem; }
+    </style>
+  </main>
+</body>
